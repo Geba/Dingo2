@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="azul_1">#003940</color>
+    <color name="azul_2">#00727F</color>
+    <color name="azul_3">#00ABBF</color>
+    <color name="azul_4">#00CDE5</color>
+    <color name="azul_5">#00E4FF</color>
+
+    <!--
+    <color name="">#</color>
+    <color name="">#</color>
+    <color name="">#</color>
+    <color name="">#</color>
+    <color name="">#</color>
+    <color name="">#</color>
+    <color name="">#</color>
+    <color name="">#</color>
+    <color name="">#</color>
+    -->
+
+</resources>

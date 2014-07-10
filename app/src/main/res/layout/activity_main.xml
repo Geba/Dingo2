@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dingo.android.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/tv_play_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="@string/play_time"
+            android:textSize="@dimen/title1" />
+
+        <TextView
+            android:id="@+id/tv_choose_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_play_time"
+            android:layout_margin="10dp"
+            android:text="@string/choose_game"
+            android:textSize="@dimen/title2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_play_time"
+            android:layout_toRightOf="@id/tv_choose_one"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <SearchView
+                android:id="@+id/search_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:queryHint="@string/search_game_hint" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--
+            <LinearLayout
+                android:id="@+id/c"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/abc_action_bar_default_height"
+                android:layout_alignParentBottom="true"
+                android:background="#456955"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp" />
+            </LinearLayout>
+        -->
+    <LinearLayout
+        android:id="@+id/b"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/a"
+        android:isScrollContainer="true"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ScrollView
+            android:id="@+id/sv_games"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+            <GridView
+                android:id="@+id/gv_list_games"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:columnWidth="40dip"
+                android:gravity="center"
+                android:horizontalSpacing="10dip"
+                android:numColumns="auto_fit"
+                android:padding="10dip"
+                android:verticalSpacing="10dip"
+                />
+</LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>
+
+
