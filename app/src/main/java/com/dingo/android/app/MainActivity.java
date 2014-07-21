@@ -1,4 +1,4 @@
-package com.dingo.android;
+package com.dingo.android.app;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.Toast;
+
+import com.dingo.android.R;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -28,11 +30,10 @@ public class MainActivity extends ActionBarActivity {
     public void populateView() {
         //   ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.android.R.layout.simple_list_item_1, myStringArray);
         GridView gd = (GridView) findViewById(R.id.gv_list_games);
-        int[] imagens = {
-                //R.drawable.smile1, R.drawable.smile2,
-                //R.drawable.smile1, R.drawable.smile2, R.drawable.smile1,
-                //R.drawable.smile2, R.drawable.smile1, R.drawable.smile2,
-                R.drawable.dc,
+        int[] imagens = {R.drawable.smile1, R.drawable.smile2,
+                R.drawable.smile1, R.drawable.smile2, R.drawable.smile1,
+                R.drawable.smile2, R.drawable.smile1, R.drawable.smile2,
+        R.drawable.dc,
                 R.drawable.amarelinha,
                 R.drawable.bdg,
                 R.drawable.bola,
@@ -44,12 +45,12 @@ public class MainActivity extends ActionBarActivity {
                 R.drawable.peteca,
                 R.drawable.corridasaco,
                 R.drawable.ee,
-                R.drawable.tsf,
-
+                R.drawable.tsf
         };
 
         GridView grid = (GridView) findViewById(R.id.gv_list_games);
         grid.setAdapter(new AdapterGames(this, imagens));
+
         grid.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int posicao, long id) {
                 Toast.makeText(MainActivity.this, "Imagem selecionada: " + posicao, Toast.LENGTH_SHORT).show();

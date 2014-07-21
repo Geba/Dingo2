@@ -1,4 +1,4 @@
-package com.dingo.android;
+package com.dingo.android.app;
 
 
 import android.app.Activity;
@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.Toast;
+
+import com.dingo.android.R;
 
 
 /**
@@ -38,7 +40,7 @@ public class ExemploGridView extends Activity {
         super.onCreate(icicle);
         setContentView(R.layout.activity_exemplo_grid_view);
         GridView grid = (GridView) findViewById(R.id.grid1);
-        grid.setAdapter(new AdapterGames(this, imagens));
+        grid.setAdapter(new AdaptadorImagem(this, imagens));
         grid.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int posicao, long id) {
                 Toast.makeText(ExemploGridView.this, "Imagem selecionada: " + posicao, Toast.LENGTH_SHORT).show();

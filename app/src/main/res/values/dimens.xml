@@ -4,4 +4,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="title1">26sp</dimen>
     <dimen name="title2">20sp</dimen>
+    <dimen name="menu_games_length">140dp</dimen>
+    <dimen name="menu_games_spacing">20dp</dimen>
 </resources>
